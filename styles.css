@@ -1,3 +1,4 @@
+
 * {
     font-family: sans-serif
   }
@@ -28,8 +29,10 @@
   }
   
   #column-right {
-    background-color: rgb(208, 0, 255);
-    background-size: cover;
+    background-color: rgb(24, 241, 107);
+    background-size: contain;
+    background-repeat: no-repeat;
     text-align: center;
     padding-top: 30px;
+    height: 50vw;
   }
