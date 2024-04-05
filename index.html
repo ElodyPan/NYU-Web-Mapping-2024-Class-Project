@@ -1,39 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ted Chiang's Works</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a styles.css -->
+</head>
+<body>
+    <div class="color-change-controls">
+        <p>Choose a background color:</p>
+        <button class="color-btn" data-color="#F0FFF0">HoneyDew</button>
+        <button class="color-btn" data-color="#FFF0F5">LavenderBlush</button>
+        <button class="color-btn" data-color="#E6E6FA">Lavender</button>
+        <button class="color-btn" data-color="#FFFFF0">Ivory</button>
+    </div>
 
-<html>
-  <div class="color-change-controls">
-  <p>Choose a background color:</p> 
-  <button class="color-btn" data-color="#F0FFF0">HoneyDew</button>
-  <button class="color-btn" data-color="#FFF0F5">LavenderBlush</button>
-  <button class="color-btn" data-color="#E6E6FA">Lavender</button>
-  <button class="color-btn" data-color="#FFFFF0">Ivory</button>
-</div>
+    <div id="container">
+        <div id="column-left" class="column">
+            <h1>Ted Chiang's Works</h1>
+            <button class="book-btn" data-answer="answer1" data-image="https://www.ancient-origins.net/sites/default/files/field/image/Tower-of-Babel_0.jpg">Tower of Babylon</button>
+            <button class="book-btn" data-answer="answer2" data-image="https://upload.wikimedia.org/wikipedia/commons/0/0e/Ted_Chiangs_%22Story_of_your_life%22_illo.jpg">Story of Your Life</button>
+        </div>
 
-<div id="container">
-  <div id="column-left" class="column">
-    <h1>Ted Chiang's Works</h1> 
-    <button class="book-btn" data-answer="answer1" data-image="https://www.ancient-origins.net/sites/default/files/field/image/Tower-of-Babel_0.jpg">Tower of Babylon</button>
-    <button class="book-btn" data-answer="answer2" data-image="https://upload.wikimedia.org/wikipedia/commons/0/0e/Ted_Chiangs_%22Story_of_your_life%22_illo.jpg">Story of Your Life</button>
-  </div>
-  
-  <div id="column-right" class="column">
-    <div id="notes-display">
-    <p>
-    Click the book name to show the reading notes here:
-    </p></div>
-    <div id="image-display" style="background-size: cover; background-position: center; height: 200px;"></div>
-  </div>
-</div>
+        <div id="column-right" class="column">
+            <div id="notes-display">
+                <p>Click the book name to show the reading notes here:</p>
+            </div>
+            <div id="image-display" style="background-size: cover; background-position: center; height: 200px;"></div>
+        </div>
+    </div>
 
-<div id="answer1" class="hidden">
-  <h2>Reading notes for 'Tower of Babylon':</h2>
-  For the first time, he knew night for what it was: the shadow of the earth itself, cast against the sky.
-</div>
-<div id="answer2" class="hidden">
-  <h2>Reading notes for 'Story of Your Life':</h2>
-  From the beginning I knew my destination, and I chose my route accordingly. But am I working toward an extreme of joy, or of pain? Will I achieve a minimum, or a maximum?
-</div>
+    <div id="answer1" class="hidden">
+        <h2>Reading notes for 'Tower of Babylon':</h2>
+        For the first time, he knew night for what it was: the shadow of the earth itself, cast against the sky.
+    </div>
+    <div id="answer2" class="hidden">
+        <h2>Reading notes for 'Story of Your Life':</h2>
+        From the beginning I knew my destination, and I chose my route accordingly. But am I working toward an extreme of joy, or of pain? Will I achieve a minimum, or a maximum?
+    </div>
 
-<script src="scripts.js"></script>
-
-  
+    <script src="scripts.js"></script>
+</body>
 </html>
