@@ -1,9 +1,9 @@
-
-div p{
+/* General paragraph styles within div elements */
+div p {
   font-family: "Lucida Console", Monaco, monospace;
-  font-size: 10px;
-  letter-spacing: 0px;
-  word-spacing: 0px;
+  font-size: 1rem;
+  letter-spacing: normal;
+  word-spacing: normal;
   color: #000000;
   font-weight: 400;
   text-decoration: none solid rgb(68, 68, 68);
@@ -11,18 +11,20 @@ div p{
   font-variant: normal;
   text-transform: uppercase;
 }
+
+/* Styles for color buttons */
 .color-btn {
   align-items: center;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, .1) 0 6px 20px;
   box-sizing: border-box;
   color: #121212;
   cursor: pointer;
   display: inline-flex;
   flex: 1 1 auto;
-  font-family: Inter,sans-serif;
-  font-size: 0.6rem;
+  font-family: Inter, sans-serif;
+  font-size: 0.75rem; /* Use relative units */
   font-weight: 700;
   justify-content: center;
   line-height: 1;
@@ -31,17 +33,20 @@ div p{
   padding: 0.5rem 2rem;
   text-align: center;
   text-decoration: none;
-  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
   white-space: nowrap;
   border: 0;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
+/* Color button hover effect */
 .color-btn:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
 
+/* Styles for book buttons */
 .book-btn {
   appearance: none;
   background-color: #000000;
@@ -51,8 +56,8 @@ div p{
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 13px;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
   font-weight: 600;
   line-height: normal;
   margin: 0;
@@ -68,11 +73,15 @@ div p{
   touch-action: manipulation;
   width: 100%;
   will-change: transform;
-  margin-bottom: 10px
+  margin-bottom: 1rem;
 }
+
+/* Disabled state for book buttons */
 .book-btn:disabled {
   pointer-events: none;
 }
+
+/* Hover and active states for book buttons */
 .book-btn:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
@@ -82,11 +91,9 @@ div p{
   transform: translateY(0);
 }
 
-h1{
+/* Styles for headings */
+h1, h2 {
   font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 20px;
-  letter-spacing: 0px;
-  word-spacing: 0px;
   color: #000000;
   font-weight: 700;
   text-decoration: none solid rgb(68, 68, 68);
@@ -94,50 +101,69 @@ h1{
   font-variant: normal;
   text-transform: capitalize;
 }
-h2{
-font-family: "Arial Black", Gadget, sans-serif;
-font-size: 12px;
-letter-spacing: 0px;
-word-spacing: 0px;
-color: #000000;
-font-weight: 700;
-text-decoration: underline solid rgb(68, 68, 68);
-font-style: normal;
-font-variant: normal;
-text-transform: capitalize;
+
+h1 {
+  font-size: 2rem;
 }
-div{
-font-family: "Times New Roman", Times, serif;
-font-size: 15px;
-letter-spacing: 0px;
-word-spacing: 0px;
-color: #000000;
-font-weight: 400;
-text-decoration: none solid rgb(68, 68, 68);
-font-style: italic;
-font-variant: normal;
-text-transform: none;
+
+h2 {
+  font-size: 1.5rem;
+  text-decoration: underline solid rgb(68, 68, 68);
 }
+
+/* General div styles */
+div {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: italic;
+  font-variant: normal;
+}
+
+/* Container and column layout */
 #container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .column {
   flex: 1;
   padding: 10px;
-  min-height: 200px;
+  box-sizing: border-box;
 }
 
 #column-left {
   border-right: 1px solid #ccc;
 }
 
+/* Hidden elements */
 .hidden {
   display: none;
 }
-#note-display{
-  margin-top: 15px; 
+
+/* Margins for note and image display */
+#note-display, #image-display {
+  margin-top: 15px;
 }
-#image-display{
-  margin-top: 15px
+
+/* Responsive adjustments with media queries */
+@media (max-width: 768px) {
+  .column {
+    flex-basis: 100%;
+  }
+  #column-left {
+    border-right: none;
+  }
+  .book-btn {
+    padding: 12px 18px;
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
 }
