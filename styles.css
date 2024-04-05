@@ -125,17 +125,24 @@ div {
 /* Container and column layout */
 #container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  height: 100%;
 }
 
 .column {
   flex: 1;
   padding: 10px;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 #column-left {
   border-right: 1px solid #ccc;
+  max-width: 50%;
+}
+
+#column-right {
+  flex-grow: 2
 }
 
 /* Hidden elements */
@@ -146,15 +153,20 @@ div {
 /* Margins for note and image display */
 #note-display, #image-display {
   margin-top: 15px;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
 }
 
 /* Responsive adjustments with media queries */
 @media (max-width: 768px) {
   .column {
-    flex-basis: 100%;
+    flex-basis: column;
   }
-  #column-left {
+  #column-left, #column-right {
     border-right: none;
+    width: 100%;
   }
   .book-btn {
     padding: 12px 18px;
